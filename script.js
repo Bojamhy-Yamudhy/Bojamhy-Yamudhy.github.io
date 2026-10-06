@@ -11,15 +11,19 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll(".view-section");
 
 
-    buttons.forEach((button) => {
+    const getSection =
+        (target) =>
+            document.getElementById(target);
 
-        button.addEventListener("click", () => {
 
-            const target =
-                button.dataset.target;
+    const showSection =
+        (
+            target,
+            updateHistory = true
+        ) => {
 
             const targetSection =
-                document.getElementById(target);
+                getSection(target);
 
 
             if (!targetSection) {
@@ -28,31 +32,81 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             /* ------------------------------
-               Botón activo
+               Estado de navegación
                ------------------------------ */
 
-            buttons.forEach((item) => {
+            buttons.forEach((button) => {
 
-                item.classList.toggle(
+                const isActive =
+                    button.dataset.target === target;
+
+
+                button.classList.toggle(
                     "active",
-                    item === button
+                    isActive
+                );
+
+
+                if (isActive) {
+
+                    button.setAttribute(
+                        "aria-current",
+                        "page"
+                    );
+
+                } else {
+
+                    button.removeAttribute(
+                        "aria-current"
+                    );
+
+                }
+
+            });
+
+
+            /* ------------------------------
+               Estado de las vistas
+               ------------------------------ */
+
+            sections.forEach((section) => {
+
+                const isActive =
+                    section === targetSection;
+
+
+                section.classList.toggle(
+                    "active",
+                    isActive
                 );
 
             });
 
 
             /* ------------------------------
-               Sección activa
+               URL
                ------------------------------ */
 
-            sections.forEach((section) => {
+            if (updateHistory) {
 
-                section.classList.toggle(
-                    "active",
-                    section === targetSection
-                );
+                const newHash =
+                    `#${target}`;
 
-            });
+
+                if (
+                    window.location.hash !==
+                    newHash
+                ) {
+
+                    history.pushState(
+                        null,
+                        "",
+                        newHash
+                    );
+
+                }
+
+            }
 
 
             /* ------------------------------
@@ -64,9 +118,78 @@ document.addEventListener("DOMContentLoaded", () => {
                 behavior: "smooth"
             });
 
-        });
+        };
+
+
+    buttons.forEach((button) => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                const target =
+                    button.dataset.target;
+
+
+                if (!target) {
+                    return;
+                }
+
+
+                showSection(target);
+
+            }
+        );
 
     });
+
+
+    /* ==========================================
+       SOPORTE DEL HISTORIAL
+       ========================================== */
+
+    const showHashSection = () => {
+
+        const hash =
+            window.location.hash
+                .replace("#", "")
+                .trim();
+
+
+        const targetSection =
+            getSection(hash);
+
+
+        if (targetSection) {
+
+            showSection(
+                hash,
+                false
+            );
+
+        } else {
+
+            showSection(
+                "inicio",
+                false
+            );
+
+        }
+
+    };
+
+
+    window.addEventListener(
+        "popstate",
+        showHashSection
+    );
+
+
+    /* ==========================================
+       ESTADO INICIAL
+       ========================================== */
+
+    showHashSection();
 
 
     /* ==========================================
@@ -99,7 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ==========================================
-       ACTUALIZAR ALTURA DEL PANEL
+       ACTUALIZAR ALTURA
        ========================================== */
 
     const updatePanelHeight = () => {
@@ -119,7 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ==========================================
-       ABRIR / CERRAR MIEMBROS
+       ABRIR / CERRAR
        ========================================== */
 
     ranksToggle.addEventListener(
@@ -147,19 +270,23 @@ document.addEventListener("DOMContentLoaded", () => {
             if (isOpen) {
 
                 /*
-                 * Se calcula el alto real del
-                 * contenido para que la transición
-                 * funcione correctamente.
+                 * Permitimos que el navegador
+                 * calcule el contenido real antes
+                 * de establecer la altura.
                  */
 
-                ranksPanel.style.maxHeight =
-                    `${ranksPanel.scrollHeight}px`;
+                requestAnimationFrame(() => {
+
+                    ranksPanel.style.maxHeight =
+                        `${ranksPanel.scrollHeight}px`;
+
+                });
 
             } else {
 
                 /*
-                 * Primero mantenemos el alto actual
-                 * y después lo llevamos a 0.
+                 * Conservamos la altura actual
+                 * antes de iniciar la contracción.
                  */
 
                 ranksPanel.style.maxHeight =
@@ -180,7 +307,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ==========================================
-       ADAPTACIÓN AL CAMBIO DE TAMAÑO
+       RESPONSIVE
        ========================================== */
 
     window.addEventListener(
@@ -190,19 +317,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ==========================================
-       OBSERVAR CAMBIOS DE CONTENIDO
+       OBSERVADOR DE CONTENIDO
        ========================================== */
 
-    const resizeObserver =
-        new ResizeObserver(() => {
+    if (
+        "ResizeObserver" in window
+    ) {
 
-            updatePanelHeight();
+        const resizeObserver =
+            new ResizeObserver(() => {
 
-        });
+                updatePanelHeight();
+
+            });
 
 
-    resizeObserver.observe(
-        ranksPanel
-    );
+        resizeObserver.observe(
+            ranksPanel
+        );
 
-})
+    }
+
+});

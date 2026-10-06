@@ -2,13 +2,29 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Interpretando - Clan</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+    <meta
+        name="theme-color"
+        content="#060b19">
+
+    <meta
+        name="description"
+        content="Interpretando — información, normas, novedades, calendario y estructura del clan.">
+
+    <title>Interpretando — Clan</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
 </head>
+
 
 <body>
 
@@ -21,33 +37,50 @@
         <div class="nav-container">
 
             <div class="nav-brand">
-                Interpretando
+
+                <span class="nav-brand__name">
+                    Interpretando
+                </span>
+
+                <span class="nav-brand__tag">
+                  
+                </span>
+
             </div>
 
-            <nav class="nav-links" aria-label="Navegación principal">
+
+            <nav
+                class="nav-links"
+                aria-label="Navegación principal">
 
                 <button
                     class="nav-btn active"
                     type="button"
-                    data-target="inicio">
+                    data-target="inicio"
+                    aria-controls="inicio"
+                    aria-current="page">
 
                     Inicio
 
                 </button>
 
+
                 <button
                     class="nav-btn"
                     type="button"
-                    data-target="novedades">
+                    data-target="novedades"
+                    aria-controls="novedades">
 
                     Novedades
 
                 </button>
 
+
                 <button
                     class="nav-btn"
                     type="button"
-                    data-target="calendario">
+                    data-target="calendario"
+                    aria-controls="calendario">
 
                     Calendario
 
@@ -78,7 +111,7 @@
 
 
             <!-- ==================================
-                 CLAN
+                 HERO DEL CLAN
                  ================================== -->
 
             <section class="clan-card">
@@ -92,38 +125,74 @@
                 <div
                     class="clan-card__surface"
                     aria-hidden="true">
-
-                    <div class="clan-card__reflection"></div>
-
-                    <div class="clan-card__border"></div>
-
                 </div>
 
 
                 <div class="clan-card__content">
 
-                    <span class="clan-card__eyebrow">
-                        CLASH ROYALE
-                    </span>
+                    <div class="clan-card__topline">
+
+                        <span class="clan-card__eyebrow">
+                            CLASH ROYALE
+                        </span>
+
+                        <span class="clan-card__status">
+                            <span
+                                class="clan-card__status-dot"
+                                aria-hidden="true">
+                            </span>
+
+                            Administración activa
+
+                        </span>
+
+                    </div>
+
 
                     <h1 id="clan-title">
-                        CLAN INTERPRETANDO
+                        INTERPRETANDO
                     </h1>
 
+
                     <p class="clan-card__description">
-                        Administración activa y un sistema de organización
-                        diseñado para mantener el clan en constante funcionamiento.
+                        Organización, normas y seguimiento interno
+                        para mantener el clan funcionando con una administración activa.
                     </p>
+
 
                     <a
                         class="btn-join"
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer">
+                        href="clashroyale://clanInfo?id=G28QQC99"
+                        aria-label="Abrir el clan Interpretando en Clash Royale">
 
                         Unirte al Clan
 
+                        <span
+                            class="btn-join__arrow"
+                            aria-hidden="true">
+                            →
+                        </span>
+
                     </a>
+
+
+                    <div
+                        class="clan-card__meta"
+                        aria-label="Características del clan">
+
+                        <span>
+                            Organización
+                        </span>
+
+                        <span>
+                            Normativas
+                        </span>
+
+                        <span>
+                            Calendario
+                        </span>
+
+                    </div>
 
                 </div>
 
@@ -136,7 +205,7 @@
 
             <article class="card normas-card">
 
-                <div class="card-header">
+                <header class="card-header">
 
                     <span class="card-header__eyebrow">
                         Administración
@@ -146,59 +215,709 @@
                         Normas del Clan
                     </h2>
 
-                </div>
+                    <p class="card-header__description">
+                        Criterios generale,
+                        actividad y organización interna.
+                    </p>
+
+                </header>
 
 
-                <ul class="normas-list">
+                <ol class="normas-list">
 
                     <li>
-                        <span class="norma-number">🔹</span>
 
-                        <span class="norma-text">
-                            Mantener respeto a todos los miembros del clan.
+                        <span
+                            class="norma-number"
+                            aria-hidden="true">
+                            01
                         </span>
+
+                        <div class="norma-text">
+
+                            <strong>
+                                Respeto
+                            </strong>
+
+                            <p>
+                                Mantener un trato respetuoso
+                                con todos los miembros del clan.
+                            </p>
+
+                        </div>
+
                     </li>
 
 
                     <li>
-                        <span class="norma-number">🔹</span>
 
-                        <span class="norma-text">
-                            7 días de inactividad y será expulsado.
-                            Si tiene rango veterano y una inactividad
-                            de 15 días, se le quitará el rango y se
-                            sumarán 5 días adicionales para su retorno.
+                        <span
+                            class="norma-number"
+                            aria-hidden="true">
+                            02
                         </span>
+
+                        <div class="norma-text">
+
+                            <strong>
+                                Inactividad
+                            </strong>
+
+                            <p>
+                                7 días de inactividad implican expulsión.
+                                Un Veterano con 15 días de inactividad
+                                perderá el rango y tendrá 5 días adicionales
+                                más para su regreso.
+                            </p>
+
+                        </div>
+
                     </li>
 
 
                     <li>
-                        <span class="norma-number">🔹</span>
 
-                        <span class="norma-text">
-                            Para obtener un ascenso a veterano debe lograr
-                            una donación de 350 cartas semanalmente.
-                            El rango colíder está en pausa a la espera
-                            de una actualización en las guerras de clanes
-                            o en su emparejamiento de rivales.
+                        <span
+                            class="norma-number"
+                            aria-hidden="true">
+                            03
                         </span>
+
+                        <div class="norma-text">
+
+                            <strong>
+                                Ascenso a Veterano
+                            </strong>
+
+                            <p>
+                                Se requiere una donación de
+                                <strong>350 cartas por semana</strong>.
+                                El rango de Colíder permanece en pausa
+                                hasta que cambien las condiciones de las
+                                guerras de clanes o su emparejamiento.
+                            </p>
+
+                        </div>
+
                     </li>
 
 
                     <li>
-                        <span class="norma-number">🔹</span>
 
-                        <span class="norma-text">
-                            Las guerras de clanes no son una prioridad,
-                            pero para mantener la liga se solicita su
-                            colaboración únicamente en la batalla del
-                            Coliseo en la última guerra de cada temporada.
+                        <span
+                            class="norma-number"
+                            aria-hidden="true">
+                            04
                         </span>
+
+                        <div class="norma-text">
+
+                            <strong>
+                                Guerras de Clanes
+                            </strong>
+
+                            <p>
+                                Las guerras no son una prioridad.
+                                Para mantener la liga se solicita
+                                únicamente la participación en la
+                                batalla del Coliseo de la última guerra
+                                de cada temporada.
+                            </p>
+
+                        </div>
+
                     </li>
 
-                </ul>
+                </ol>
 
             </article>
+
+
+            <!--MIEMBROS -->
+
+            <section
+                class="ranks-section"
+                aria-labelledby="ranksToggle">
+
+                <button
+                    class="ranks-toggle"
+                    id="ranksToggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="ranksPanel">
+
+                    <span class="ranks-toggle__label">
+                        Miembros
+                    </span>
+
+                    <span
+                        class="ranks-toggle__icon"
+                        aria-hidden="true">
+                        ↓
+                    </span>
+
+                </button>
+
+
+                <div
+                    class="ranks-panel"
+                    id="ranksPanel"
+                    aria-hidden="true">
+
+                    <div class="ranks-panel__inner">
+
+
+                        <!-- ==================================
+                             LÍDER
+                             ================================== -->
+
+                        <div class="rank-group rank-group--leader">
+
+                            <div
+                                class="rank-heading"
+                                aria-hidden="true">
+
+                                <span class="rank-heading__line"></span>
+
+                                <span class="rank-heading__label">
+                                    LÍDER
+                                </span>
+
+                                <span class="rank-heading__line"></span>
+
+                            </div>
+
+
+                            <div class="rank-list">
+
+                                <article class="rank-card rank-card--leader">
+
+                                    <div
+                                        class="rank-card__shine"
+                                        aria-hidden="true">
+                                    </div>
+
+                                    <div class="rank-card__content">
+
+                                        <span class="rank-card__role">
+                                            Líder
+                                        </span>
+
+                                        <strong class="rank-card__name">
+                                            Bojamhy Yamudhy
+                                        </strong>
+
+                                    </div>
+
+                                </article>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ==================================
+                             COLÍDERES
+                             ================================== -->
+
+                        <div class="rank-group rank-group--coleader">
+
+                            <div
+                                class="rank-heading"
+                                aria-hidden="true">
+
+                                <span class="rank-heading__line"></span>
+
+                                <span class="rank-heading__label">
+                                    COLÍDERES
+                                </span>
+
+                                <span class="rank-heading__line"></span>
+
+                            </div>
+
+
+                            <div class="rank-list">
+
+
+                                <article class="rank-card rank-card--coleader">
+
+                                    <div
+                                        class="rank-card__shine"
+                                        aria-hidden="true">
+                                    </div>
+
+                                    <div class="rank-card__content">
+
+                                        <span class="rank-card__role">
+                                            Colíder
+                                        </span>
+
+                                        <strong class="rank-card__name">
+                                            jaduki71
+                                        </strong>
+
+                                    </div>
+
+                                </article>
+
+
+                                <article class="rank-card rank-card--coleader">
+
+                                    <div
+                                        class="rank-card__shine"
+                                        aria-hidden="true">
+                                    </div>
+
+                                    <div class="rank-card__content">
+
+                                        <span class="rank-card__role">
+                                            Colíder
+                                        </span>
+
+                                        <strong class="rank-card__name">
+                                            Prince✨Yamudhy
+                                        </strong>
+
+                                    </div>
+
+                                </article>
+
+
+                                <article class="rank-card rank-card--coleader">
+
+                                    <div
+                                        class="rank-card__shine"
+                                        aria-hidden="true">
+                                    </div>
+
+                                    <div class="rank-card__content">
+
+                                        <span class="rank-card__role">
+                                            Colíder
+                                        </span>
+
+                                        <strong class="rank-card__name">
+                                            ジャスティン
+                                        </strong>
+
+                                    </div>
+
+                                </article>
+
+
+                                <article class="rank-card rank-card--coleader">
+
+                                    <div
+                                        class="rank-card__shine"
+                                        aria-hidden="true">
+                                    </div>
+
+                                    <div class="rank-card__content">
+
+                                        <span class="rank-card__role">
+                                            Colíder
+                                        </span>
+
+                                        <strong class="rank-card__name">
+                                            minato
+                                        </strong>
+
+                                    </div>
+
+                                </article>
+
+
+                                <article class="rank-card rank-card--coleader">
+
+                                    <div
+                                        class="rank-card__shine"
+                                        aria-hidden="true">
+                                    </div>
+
+                                    <div class="rank-card__content">
+
+                                        <span class="rank-card__role">
+                                            Colíder
+                                        </span>
+
+                                        <strong class="rank-card__name">
+                                            papi Ángel XD
+                                        </strong>
+
+                                    </div>
+
+                                </article>
+
+
+                                <article class="rank-card rank-card--coleader">
+
+                                    <div
+                                        class="rank-card__shine"
+                                        aria-hidden="true">
+                                    </div>
+
+                                    <div class="rank-card__content">
+
+                                        <span class="rank-card__role">
+                                            Colíder
+                                        </span>
+
+                                        <strong class="rank-card__name">
+                                            Elrey Mortaniel
+                                        </strong>
+
+                                    </div>
+
+                                </article>
+
+
+                                <article class="rank-card rank-card--coleader">
+
+                                    <div
+                                        class="rank-card__shine"
+                                        aria-hidden="true">
+                                    </div>
+
+                                    <div class="rank-card__content">
+
+                                        <span class="rank-card__role">
+                                            Colíder
+                                        </span>
+
+                                        <strong class="rank-card__name">
+                                            RED HOOD
+                                        </strong>
+
+                                    </div>
+
+                                </article>
+
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ==================================
+                             VETERANOS
+                             ================================== -->
+
+                        <div class="rank-group rank-group--veteran">
+
+                            <div
+                                class="rank-heading"
+                                aria-hidden="true">
+
+                                <span class="rank-heading__line"></span>
+
+                                <span class="rank-heading__label">
+                                    VETERANOS
+                                </span>
+
+                                <span class="rank-heading__line"></span>
+
+                            </div>
+
+
+                            <div class="rank-list">
+
+
+                                <article class="rank-card rank-card--veteran">
+
+                                    <div
+                                        class="rank-card__shine"
+                                        aria-hidden="true">
+                                    </div>
+
+                                    <div class="rank-card__content">
+
+                                        <span class="rank-card__role">
+                                            Veterano
+                                        </span>
+
+                                        <strong class="rank-card__name">
+                                            puchulio
+                                        </strong>
+
+                                    </div>
+
+                                </article>
+
+
+                                <article class="rank-card rank-card--veteran">
+
+                                    <div
+                                        class="rank-card__shine"
+                                        aria-hidden="true">
+                                    </div>
+
+                                    <div class="rank-card__content">
+
+                                        <span class="rank-card__role">
+                                            Veterano
+                                        </span>
+
+                                        <strong class="rank-card__name">
+                                            ₮łⱫł_₥₦Ⱬ
+                                        </strong>
+
+                                    </div>
+
+                                </article>
+
+
+                                <article class="rank-card rank-card--veteran">
+
+                                    <div
+                                        class="rank-card__shine"
+                                        aria-hidden="true">
+                                    </div>
+
+                                    <div class="rank-card__content">
+
+                                        <span class="rank-card__role">
+                                            Veterano
+                                        </span>
+
+                                        <strong class="rank-card__name">
+                                            aplasta
+                                        </strong>
+
+                                    </div>
+
+                                </article>
+
+
+                                <article class="rank-card rank-card--veteran">
+
+                                    <div
+                                        class="rank-card__shine"
+                                        aria-hidden="true">
+                                    </div>
+
+                                    <div class="rank-card__content">
+
+                                        <span class="rank-card__role">
+                                            Veterano
+                                        </span>
+
+                                        <strong class="rank-card__name">
+                                            FREDY FIERRO
+                                        </strong>
+
+                                    </div>
+
+                                </article>
+
+
+                                <article class="rank-card rank-card--veteran">
+
+                                    <div
+                                        class="rank-card__shine"
+                                        aria-hidden="true">
+                                    </div>
+
+                                    <div class="rank-card__content">
+
+                                        <span class="rank-card__role">
+                                            Veterano
+                                        </span>
+
+                                        <strong class="rank-card__name">
+                                            p0rtql3r
+                                        </strong>
+
+                                    </div>
+
+                                </article>
+
+
+                                <article class="rank-card rank-card--veteran">
+
+                                    <div
+                                        class="rank-card__shine"
+                                        aria-hidden="true">
+                                    </div>
+
+                                    <div class="rank-card__content">
+
+                                        <span class="rank-card__role">
+                                            Veterano
+                                        </span>
+
+                                        <strong class="rank-card__name">
+                                            JorgeB214
+                                        </strong>
+
+                                    </div>
+
+                                </article>
+
+
+                                <article class="rank-card rank-card--veteran">
+
+                                    <div
+                                        class="rank-card__shine"
+                                        aria-hidden="true">
+                                    </div>
+
+                                    <div class="rank-card__content">
+
+                                        <span class="rank-card__role">
+                                            Veterano
+                                        </span>
+
+                                        <strong class="rank-card__name">
+                                            Tilin
+                                        </strong>
+
+                                    </div>
+
+                                </article>
+
+
+                                <article class="rank-card rank-card--veteran">
+
+                                    <div
+                                        class="rank-card__shine"
+                                        aria-hidden="true">
+                                    </div>
+
+                                    <div class="rank-card__content">
+
+                                        <span class="rank-card__role">
+                                            Veterano
+                                        </span>
+
+                                        <strong class="rank-card__name">
+                                            mini peka insan
+                                        </strong>
+
+                                    </div>
+
+                                </article>
+
+
+                                <article class="rank-card rank-card--veteran">
+
+                                    <div
+                                        class="rank-card__shine"
+                                        aria-hidden="true">
+                                    </div>
+
+                                    <div class="rank-card__content">
+
+                                        <span class="rank-card__role">
+                                            Veterano
+                                        </span>
+
+                                        <strong class="rank-card__name">
+                                            Roxy Migurdia
+                                        </strong>
+
+                                    </div>
+
+                                </article>
+
+
+                                <article class="rank-card rank-card--veteran">
+
+                                    <div
+                                        class="rank-card__shine"
+                                        aria-hidden="true">
+                                    </div>
+
+                                    <div class="rank-card__content">
+
+                                        <span class="rank-card__role">
+                                            Veterano
+                                        </span>
+
+                                        <strong class="rank-card__name">
+                                            セバスティアン
+                                        </strong>
+
+                                    </div>
+
+                                </article>
+
+
+                                <article class="rank-card rank-card--veteran">
+
+                                    <div
+                                        class="rank-card__shine"
+                                        aria-hidden="true">
+                                    </div>
+
+                                    <div class="rank-card__content">
+
+                                        <span class="rank-card__role">
+                                            Veterano
+                                        </span>
+
+                                        <strong class="rank-card__name">
+                                            Kumiko Yamamura
+                                        </strong>
+
+                                    </div>
+
+                                </article>
+
+
+                                <article class="rank-card rank-card--veteran">
+
+                                    <div
+                                        class="rank-card__shine"
+                                        aria-hidden="true">
+                                    </div>
+
+                                    <div class="rank-card__content">
+
+                                        <span class="rank-card__role">
+                                            Veterano
+                                        </span>
+
+                                        <strong class="rank-card__name">
+                                            Aisaka Taiga
+                                        </strong>
+
+                                    </div>
+
+                                </article>
+
+
+                                <article class="rank-card rank-card--veteran">
+
+                                    <div
+                                        class="rank-card__shine"
+                                        aria-hidden="true">
+                                    </div>
+
+                                    <div class="rank-card__content">
+
+                                        <span class="rank-card__role">
+                                            Veterano
+                                        </span>
+
+                                        <strong class="rank-card__name">
+                                            Yuki Suou
+                                        </strong>
+
+                                    </div>
+
+                                </article>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
 
         </section>
 
@@ -212,35 +931,83 @@
             class="view-section"
             aria-labelledby="novedades-title">
 
-            <h2 id="novedades-title">
-                Novedades
-            </h2>
+
+            <header class="page-header">
+
+                <span class="page-header__eyebrow">
+                    ACTUALIZACIONES DEL CLAN
+                </span>
+
+                <h2 id="novedades-title">
+                    Novedades
+                </h2>
+
+                <p>
+                    Comunicados y avances relevantes
+                    de la administración.
+                </p>
+
+            </header>
 
 
             <div class="news-container">
 
-                <article class="card news-card">
+                <article class="news-card">
+
+                    <div class="news-card__top">
+
+                        <div>
+
+                            <span class="news-card__eyebrow">
+                                DESARROLLO INTERNO
+                            </span>
+
+                            <h3>
+                                Proyecto CORVUS
+                            </h3>
+
+                        </div>
+
+
+                        <span class="news-card__status">
+                            En desarrollo
+                        </span>
+
+                    </div>
+
 
                     <time
                         class="news-date"
                         datetime="2026-09-29">
 
-                        🔸29 de Septiembre, 2026
+                        1 de septiembre de 2026
 
                     </time>
 
 
-                    <h3>
-                        Proyecto CORVUS
-                    </h3>
-
-
-                    <p>
-                        Somos conscientes de muchos problemas y de que
-                        se pueden mejorar. Esto nos llevó a comenzar a
-                        desarrollar una herramienta mucho más avanzada.
-                        Esto demorará, así que agradecemos su paciencia.
+                    <p class="news-card__description">
+                        La administración continúa en evolución.
+                        A partir de varios problemas detectados
+                        en la gestión diaria, comenzamos a desarrollar
+                        CORVUS: una herramienta orientada a tareas, moderación, reducir errores y más.
                     </p>
+
+
+                    <div class="news-card__footer">
+
+                        <span>
+                            Administración
+                        </span>
+
+                        <span aria-hidden="true">
+                            /
+                        </span>
+
+                        <span>
+                            CORVUS
+                        </span>
+
+                    </div>
 
                 </article>
 
@@ -258,9 +1025,22 @@
             class="view-section"
             aria-labelledby="calendario-title">
 
-            <h2 id="calendario-title">
-                Calendario Semanal
-            </h2>
+
+            <header class="page-header">
+
+                <span class="page-header__eyebrow">
+                    ORGANIZACIÓN
+                </span>
+
+                <h2 id="calendario-title">
+                    Calendario Semanal
+                </h2>
+
+                <p>
+                    Actividades programadas de la administración.
+                </p>
+
+            </header>
 
 
             <div class="calendar-wrapper">
@@ -289,32 +1069,75 @@
                         <tr>
 
                             <td data-label="Lunes">
-                                -
+
+                                <span class="calendar-empty">
+                                    Sin actividad
+                                </span>
+
                             </td>
 
-                            <td data-label="Martes">
-                                Comunicado de normas
-                                (Español / Inglés)
+
+                            <td
+                                data-label="Martes"
+                                class="calendar-active">
+
+                                <strong>
+                                    Comunicado de normas
+                                </strong>
+
+                                <span>
+                                    Español / Inglés
+                                </span>
+
                             </td>
+
 
                             <td data-label="Miércoles">
-                                -
+
+                                <span class="calendar-empty">
+                                    Sin actividad
+                                </span>
+
                             </td>
+
 
                             <td data-label="Jueves">
-                                -
+
+                                <span class="calendar-empty">
+                                    Sin actividad
+                                </span>
+
                             </td>
 
-                            <td data-label="Viernes">
-                                Revisión de personal
+
+                            <td
+                                data-label="Viernes"
+                                class="calendar-active">
+
+                                <strong>
+                                    Revisión de personal
+                                </strong>
+
                             </td>
+
 
                             <td data-label="Sábado">
-                                -
+
+                                <span class="calendar-empty">
+                                    Sin actividad
+                                </span>
+
                             </td>
 
-                            <td data-label="Domingo">
-                                Actualización de la descripción
+
+                            <td
+                                data-label="Domingo"
+                                class="calendar-active">
+
+                                <strong>
+                                    Actualización de la descripción
+                                </strong>
+
                             </td>
 
                         </tr>
@@ -327,414 +1150,19 @@
 
         </section>
 
-
-        <!-- ==========================================
-             MIEMBROS
-             ========================================== -->
-
-        <section
-            class="ranks-section"
-            aria-label="Miembros del clan">
-
-
-            <!-- BOTÓN -->
-
-            <button
-                class="ranks-toggle"
-                id="ranksToggle"
-                type="button"
-                aria-expanded="false"
-                aria-controls="ranksPanel">
-
-                Miembros
-
-            </button>
-
-
-            <!-- PANEL -->
-
-            <div
-                class="ranks-panel"
-                id="ranksPanel"
-                aria-hidden="true">
-
-                <div class="ranks-panel__inner">
-
-
-                    <!-- ==================================
-                         LÍDER
-                         ================================== -->
-
-                    <div class="rank-group rank-group--leader">
-
-                        <div
-                            class="rank-heading"
-                            aria-hidden="true">
-
-                            <span class="rank-heading__line"></span>
-
-                            <span class="rank-heading__label">
-                                LÍDER
-                            </span>
-
-                            <span class="rank-heading__line"></span>
-
-                        </div>
-
-
-                        <div class="rank-list">
-
-                            <article class="rank-card rank-card--leader">
-
-                                <div
-                                    class="rank-card__shine"
-                                    aria-hidden="true">
-                                </div>
-
-                                <div class="rank-card__content">
-
-                                    <span class="rank-card__role">
-                                        Líder
-                                    </span>
-
-                                    <strong class="rank-card__name">
-                                        Bojamhy Yamudhy
-                                    </strong>
-
-                                </div>
-
-                            </article>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- ==================================
-                         COLÍDERES
-                         ================================== -->
-
-                    <div class="rank-group rank-group--coleader">
-
-                        <div
-                            class="rank-heading"
-                            aria-hidden="true">
-
-                            <span class="rank-heading__line"></span>
-
-                            <span class="rank-heading__label">
-                                COLÍDERES
-                            </span>
-
-                            <span class="rank-heading__line"></span>
-
-                        </div>
-
-
-                        <div class="rank-list">
-
-
-                            <article class="rank-card rank-card--coleader">
-
-                                <div class="rank-card__shine"></div>
-
-                                <div class="rank-card__content">
-
-                                    <span class="rank-card__role">
-                                        Colíder
-                                    </span>
-
-                                    <strong class="rank-card__name">
-                                        jaduki71
-                                    </strong>
-
-                                </div>
-
-                            </article>
-
-
-                            <article class="rank-card rank-card--coleader">
-
-                                <div class="rank-card__shine"></div>
-
-                                <div class="rank-card__content">
-
-                                    <span class="rank-card__role">
-                                        Colíder
-                                    </span>
-
-                                    <strong class="rank-card__name">
-                                        Prince✨Yamudhy
-                                    </strong>
-
-                                </div>
-
-                            </article>
-
-
-                            <article class="rank-card rank-card--coleader">
-
-                                <div class="rank-card__shine"></div>
-
-                                <div class="rank-card__content">
-
-                                    <span class="rank-card__role">
-                                        Colíder
-                                    </span>
-
-                                    <strong class="rank-card__name">
-                                        ジャスティン
-                                    </strong>
-
-                                </div>
-
-                            </article>
-
-
-                            <article class="rank-card rank-card--coleader">
-
-                                <div class="rank-card__shine"></div>
-
-                                <div class="rank-card__content">
-
-                                    <span class="rank-card__role">
-                                        Colíder
-                                    </span>
-
-                                    <strong class="rank-card__name">
-                                        minato
-                                    </strong>
-
-                                </div>
-
-                            </article>
-
-
-                            <article class="rank-card rank-card--coleader">
-
-                                <div class="rank-card__shine"></div>
-
-                                <div class="rank-card__content">
-
-                                    <span class="rank-card__role">
-                                        Colíder
-                                    </span>
-
-                                    <strong class="rank-card__name">
-                                        papi Ángel XD
-                                    </strong>
-
-                                </div>
-
-                            </article>
-
-
-                            <article class="rank-card rank-card--coleader">
-
-                                <div class="rank-card__shine"></div>
-
-                                <div class="rank-card__content">
-
-                                    <span class="rank-card__role">
-                                        Colíder
-                                    </span>
-
-                                    <strong class="rank-card__name">
-                                        Elrey Mortaniel
-                                    </strong>
-
-                                </div>
-
-                            </article>
-
-
-                            <article class="rank-card rank-card--coleader">
-
-                                <div class="rank-card__shine"></div>
-
-                                <div class="rank-card__content">
-
-                                    <span class="rank-card__role">
-                                        Colíder
-                                    </span>
-
-                                    <strong class="rank-card__name">
-                                        RED HOOD
-                                    </strong>
-
-                                </div>
-
-                            </article>
-
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- ==================================
-                         VETERANOS
-                         ================================== -->
-
-                    <div class="rank-group rank-group--veteran">
-
-                        <div
-                            class="rank-heading"
-                            aria-hidden="true">
-
-                            <span class="rank-heading__line"></span>
-
-                            <span class="rank-heading__label">
-                                VETERANOS
-                            </span>
-
-                            <span class="rank-heading__line"></span>
-
-                        </div>
-
-
-                        <div class="rank-list">
-
-
-                            <article class="rank-card rank-card--veteran">
-                                <div class="rank-card__shine"></div>
-                                <div class="rank-card__content">
-                                    <span class="rank-card__role">Veterano</span>
-                                    <strong class="rank-card__name">puchulio</strong>
-                                </div>
-                            </article>
-
-
-                            <article class="rank-card rank-card--veteran">
-                                <div class="rank-card__shine"></div>
-                                <div class="rank-card__content">
-                                    <span class="rank-card__role">Veterano</span>
-                                    <strong class="rank-card__name">₮łⱫł_₥₦Ⱬ</strong>
-                                </div>
-                            </article>
-
-
-                            <article class="rank-card rank-card--veteran">
-                                <div class="rank-card__shine"></div>
-                                <div class="rank-card__content">
-                                    <span class="rank-card__role">Veterano</span>
-                                    <strong class="rank-card__name">aplasta</strong>
-                                </div>
-                            </article>
-
-
-                            <article class="rank-card rank-card--veteran">
-                                <div class="rank-card__shine"></div>
-                                <div class="rank-card__content">
-                                    <span class="rank-card__role">Veterano</span>
-                                    <strong class="rank-card__name">FREDY FIERRO</strong>
-                                </div>
-                            </article>
-
-
-                            <article class="rank-card rank-card--veteran">
-                                <div class="rank-card__shine"></div>
-                                <div class="rank-card__content">
-                                    <span class="rank-card__role">Veterano</span>
-                                    <strong class="rank-card__name">p0rtql3r</strong>
-                                </div>
-                            </article>
-
-
-                            <article class="rank-card rank-card--veteran">
-                                <div class="rank-card__shine"></div>
-                                <div class="rank-card__content">
-                                    <span class="rank-card__role">Veterano</span>
-                                    <strong class="rank-card__name">JorgeB214</strong>
-                                </div>
-                            </article>
-
-
-                            <article class="rank-card rank-card--veteran">
-                                <div class="rank-card__shine"></div>
-                                <div class="rank-card__content">
-                                    <span class="rank-card__role">Veterano</span>
-                                    <strong class="rank-card__name">Tilin</strong>
-                                </div>
-                            </article>
-
-
-                            <article class="rank-card rank-card--veteran">
-                                <div class="rank-card__shine"></div>
-                                <div class="rank-card__content">
-                                    <span class="rank-card__role">Veterano</span>
-                                    <strong class="rank-card__name">mini peka insan</strong>
-                                </div>
-                            </article>
-
-
-                            <article class="rank-card rank-card--veteran">
-                                <div class="rank-card__shine"></div>
-                                <div class="rank-card__content">
-                                    <span class="rank-card__role">Veterano</span>
-                                    <strong class="rank-card__name">Roxy Migurdia</strong>
-                                </div>
-                            </article>
-
-
-                            <article class="rank-card rank-card--veteran">
-                                <div class="rank-card__shine"></div>
-                                <div class="rank-card__content">
-                                    <span class="rank-card__role">Veterano</span>
-                                    <strong class="rank-card__name">セバスティアン</strong>
-                                </div>
-                            </article>
-
-
-                            <article class="rank-card rank-card--veteran">
-                                <div class="rank-card__shine"></div>
-                                <div class="rank-card__content">
-                                    <span class="rank-card__role">Veterano</span>
-                                    <strong class="rank-card__name">Kumiko Yamamura</strong>
-                                </div>
-                            </article>
-
-
-                            <article class="rank-card rank-card--veteran">
-                                <div class="rank-card__shine"></div>
-                                <div class="rank-card__content">
-                                    <span class="rank-card__role">Veterano</span>
-                                    <strong class="rank-card__name">Aisaka Taiga</strong>
-                                </div>
-                            </article>
-
-
-                            <article class="rank-card rank-card--veteran">
-                                <div class="rank-card__shine"></div>
-                                <div class="rank-card__content">
-                                    <span class="rank-card__role">Veterano</span>
-                                    <strong class="rank-card__name">Yuki Suou</strong>
-                                </div>
-                            </article>
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
     </main>
 
 
     <!-- ==========================================
-         FOOTER GLOBAL
+         FOOTER
          ========================================== -->
 
-    <footer class="barnegative">
+    <footer class="site-footer">
 
-        <div class="credits">
-            © 2026 Interpretando. Todos los derechos reservados.
-        </div>
+        <span class="site-footer__credits">
+            © 2026 Interpretando - En Desarrollo -  
+          <strong>B.Y</strong>
+        </span>
 
     </footer>
 
